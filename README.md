@@ -1,4 +1,5 @@
 # Penetration-Testing
+An assignment for my Intro to Ethical-Hacking course (CMSC 389R) at the University of Maryland.
 
 ## Part 1
 
