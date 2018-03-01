@@ -52,5 +52,6 @@ It seems that Mark's problem is that he does not sanitize his input, anything th
 Aternatively, Mark could use input sanitization to remove any additional commands that someone may try to run while using his service. Something simple from python's ```urllib.parse``` library can work:
 
 ```
+from urllib.parse import urlparse
 ping -c 5 urlparse($domain)
 ```
