@@ -25,7 +25,7 @@ Easter Egg: WAIT THIS ISN'T ENCRYPTION?? CMSC389R-{base64_is_still_used_for_cryp
 
 ## Part 2
 
-The first thing I did for this part was to search exploit_db (https://www.exploit-db.com/) for possible command line exploits we could use with the metasploit console, I did not find anything substantial that I could use and I decided to connect to Mark's server with ```nc briong.com 45``` to run a few commands and implement some black box testing. After inputing a few commands with little success, I remembered that I could use ```&&``` to run two commands one after the other I started exploring the server running commands such as ```google.com && ls -a``` to look inside Mark's server. I located the home directory and ran ```google.com && ls home``` which revealed the ```flag.txt``` file which contained the flag:
+In terms of my thought process, the first thing I did for this part was to search exploit_db (https://www.exploit-db.com/) for possible command line exploits we could use with the metasploit console, I did not find anything substantial that I could use and so I decided to connect to Mark's server with ```nc briong.com 45``` to run a few commands and implement some black box testing. After inputing a few commands with little success, I remembered that I could use ```&&``` to run two commands one after the other, so I started exploring the server running commands such as ```google.com && ls -a``` to look inside Mark's server. I located the ```home``` directory and ran ```google.com && ls home``` which revealed the ```flag.txt``` file which contained the flag:
 
 ```Flag: CMSC389R-{p1ng_c0mmand_inj3ction}```
 
