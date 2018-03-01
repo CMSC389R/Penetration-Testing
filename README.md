@@ -34,7 +34,8 @@ python -c "import commands; s,c = commands.getstatusoutput('ping -c 5 $domain');
 
 It seems that Mark's problem is that he does not sanitize his input, anything that a user enters goes unchecked and is run, Mark could easily check his input by using regular expressions, something like this could work: 
 
-```/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
+```
+/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/
 ```
 
 Aternatively, Mark could use input sanitization, to remove any additional commands that someone may try to run while using his service. Something simple like this can work:
