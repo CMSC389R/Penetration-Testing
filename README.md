@@ -14,7 +14,7 @@ set VERBOSE true
 exploit
 ```
 
-This gave me a large amount of output, but from all this data a few keywords popped out at me, the username, password, flag, and easter egg. The easter egg was something not recognizable, but one thing that led me to believe that it was encrpyted was the ```'='``` character at the end of the long string of letters, I knew that this character is used as padding for 64bit encryption. 
+This gave me a large amount of output, but from all this data a few keywords popped out at me, the username, password, flag, and easter egg. The easter egg was something not recognizable, but one thing that led me to believe that it was encrpyted was the ```'='``` character at the end of the long string of letters, I knew that this character is used as padding for 64bit encryption, so after running it through a decoder, I recieved the easter egg message: 
 
 
 ```
